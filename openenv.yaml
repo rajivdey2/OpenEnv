@@ -1,0 +1,48 @@
+name: data-clean-env
+version: "0.1.0"
+description: >
+  A real-world data cleaning environment where an AI agent must identify and fix
+  data quality issues (nulls, duplicates, type errors, schema mismatches) in
+  simulated tabular datasets. Three tasks of increasing difficulty.
+author: "max"
+tags:
+  - openenv
+  - data-cleaning
+  - real-world
+  - tabular
+
+tasks:
+  - id: 1
+    name: "Fix Null Values"
+    difficulty: easy
+    max_steps: 20
+    scoring: continuous
+
+  - id: 2
+    name: "Normalize and Deduplicate"
+    difficulty: medium
+    max_steps: 20
+    scoring: continuous
+
+  - id: 3
+    name: "Schema Alignment and Referential Integrity"
+    difficulty: hard
+    max_steps: 25
+    scoring: continuous
+
+action_space:
+  type: structured
+  schema: CleaningAction
+
+observation_space:
+  type: structured
+  schema: CleaningObservation
+
+reward:
+  range: [0.0, 1.0]
+  partial_credit: true
+  penalties: true
+
+server:
+  port: 8000
+  framework: fastapi
