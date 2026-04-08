@@ -121,3 +121,17 @@ def root():
         "docs":    "/docs",
         "tasks":   [1, 2, 3],
     }
+
+def main():
+    """Entry point for [project.scripts] and direct execution."""
+    import uvicorn
+    uvicorn.run(
+        "server.app:app",
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000)),
+        reload=False,
+    )
+
+
+if __name__ == "__main__":
+    main()
