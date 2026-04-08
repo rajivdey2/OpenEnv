@@ -57,7 +57,7 @@ All actions are structured JSON matching the `CleaningAction` Pydantic model.
 | `normalize_column` | `column`, `format` | Normalize dates, phones, or currency |
 | `cast_column` | `column`, `target_type`, `table?` | Fix column data types |
 | `remove_orphans` | `column`, `ref_table?` | Remove rows with broken foreign keys |
-| `flag_outliers` | `column`, `table?` | Report outlier rows |
+| `flag_outliers` | `column`, `rule?`, `table?` | Report outlier rows |
 | `fix_outlier` | `column`, `row_id`, `value`, `table?` | Correct a specific outlier |
 | `join_inspect` | — | Check referential integrity across tables |
 | `done` | — | Signal episode completion |
