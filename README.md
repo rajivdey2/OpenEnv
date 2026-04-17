@@ -1,19 +1,8 @@
----
-title: DataCleanEnv
-emoji: 🧹
-colorFrom: blue
-colorTo: green
-sdk: docker
-pinned: false
-tags:
-  - openenv
----
-
-# DataCleanEnv — OpenEnv Data Cleaning Environment
+ # DataCleanEnv — OpenEnv Data Cleaning Environment
 
 ## Overview
 
-**DataCleanEnv** is an [OpenEnv](https://huggingface.co/openenv)-compliant environment where an AI agent
+**DataCleanEnv** is an compliant environment where an AI agent
 must identify and fix data quality issues in simulated tabular datasets.
 
 Three tasks of increasing difficulty — from simple null-value filling to multi-table referential
